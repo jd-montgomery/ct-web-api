@@ -17,8 +17,6 @@ namespace CT_Web_Api.Models
 		[StringLength(4096, MinimumLength = 3)]
 		public string Description { get; set; }
 
-		[DataType(DataType.Date)]
-		[DisplayFormat(DataFormatString = "{0:yyyy}", ApplyFormatInEditMode = true)]
 		public ushort? YearEstablished { get; set; }
 
 		[Required]
@@ -27,11 +25,12 @@ namespace CT_Web_Api.Models
 		[DataType(DataType.DateTime)]
 		[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
 		public DateTime CreatedOn { get; set; }
+
 		public ApplicationUser ModifiedBy { get; set; }
 
 		[DataType(DataType.DateTime)]
 		[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-		public DateTime ModifiedOn { get; set; }
+		public DateTime? ModifiedOn { get; set; }
 		
 		public virtual IEnumerable<Beer> Beers { get; set; }
 		public virtual IEnumerable<State> Distribution { get; set; }
