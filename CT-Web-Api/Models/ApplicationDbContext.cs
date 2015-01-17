@@ -29,10 +29,6 @@ namespace CT_Web_Api.Models
 			modelBuilder.Properties<DateTime>()
 				.Configure(c => c.HasColumnType("datetime2"));
 
-			modelBuilder.Entity<Brewery>()
-				.Property(b => b.Name)
-				.HasColumnAnnotation(IndexAnnotation.AnnotationName, new IndexAnnotation("UQ_BreweryName", 1) { IsUnique = true });
-
 			base.OnModelCreating(modelBuilder);
 		}
 	}
