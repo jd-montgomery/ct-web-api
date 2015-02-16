@@ -9,7 +9,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using CT_Web_Api.Models;
+using DataAccessLayer.Security;
 
 namespace CT_Web_Api.Providers
 {

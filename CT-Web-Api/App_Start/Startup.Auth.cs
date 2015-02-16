@@ -9,7 +9,8 @@ using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using CT_Web_Api.Providers;
-using CT_Web_Api.Models;
+using DataAccessLayer;
+using DataAccessLayer.Security;
 
 namespace CT_Web_Api
 {
